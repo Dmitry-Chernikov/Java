@@ -1,4 +1,4 @@
-import process.Exams;
+import Exams.Exams;
 
 import java.io.*;
 
@@ -19,10 +19,13 @@ public class Main {
                     FileWriter writer = new FileWriter(file);
 
                     for (int i = 0 ;  i < exams.students.size(); i++)
-                        for (int j = 0; j < exams.students.get(i).records.size(); j++) {
-                            System.out.println(exams.students.get(i).FullName+" "+exams.students.get(i).records.get(j).FullNameTeacher + "(IQ=" + exams.students.get(i).records.get(j).Evaluation + ")-" + exams.students.get(i).records.get(j).Test);
+                        for (int j = 0; j < exams.students.get(i).getRecords().size(); j++) {
+                            System.out.println(exams.students.get(i).getFullName()+
+                                    " "+exams.students.get(i).getRecords().get(j).FullNameTeacher +
+                                    "(IQ=" + exams.students.get(i).getRecords().get(j).Evaluation +
+                                    ")-" + exams.students.get(i).getRecords().get(j).Test);
                             // Запись содержимого в файл
-                            writer.write(exams.students.get(i).FullName+" "+exams.students.get(i).records.get(j).FullNameTeacher + "(IQ=" + exams.students.get(i).records.get(j).Evaluation + ")-" + exams.students.get(i).records.get(j).Test);
+                            writer.write(exams.students.get(i).getFullName()+" "+exams.students.get(i).getRecords().get(j).FullNameTeacher + "(IQ=" + exams.students.get(i).getRecords().get(j).Evaluation + ")-" + exams.students.get(i).getRecords().get(j).Test);
                             writer.append('\n');
                         }
 
