@@ -1,34 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="278246e7-bada-47c9-8ed2-6c5263686b19" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled/.idea/kotlinc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled/.idea/libraries/KotlinJavaRuntime.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled/untitled.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Exam/Exams/Exam.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Exam/Exams/Exam.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Exam/Exams/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Exam/Exams/Student.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Exam/Exams/TeachersСomposition/AbstractTeacher.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Exam/Exams/TeachersСomposition/AbstractTeacher.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Exam/Exams/TeachersСomposition/Teacher.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Exam/Exams/TeachersСomposition/Teacher.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Exam/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Exam/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Exam/process/EnglishTeacher.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Exam/process/Exams.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Exam/process/Instance.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Exam/process/MathTeacher.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Exam/process/Persone.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Exam/process/Student$Records.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Exam/process/Student.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Exam/process/Teacher.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exams/Exam.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exams/Exam.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exams/Instance.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exams/TeachersСomposition/AbstractTeacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exams/TeachersСomposition/AbstractTeacher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-    </list>
+    <list default="true" id="278246e7-bada-47c9-8ed2-6c5263686b19" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,7 +147,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="25" />
     <option name="y" value="16" />
     <option name="width" value="1243" />
@@ -218,7 +191,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1561409449258" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1561409685131" />
     <property name="last_opened_file_path" value="$KOTLIN_BUNDLED$/lib/sam-with-receiver-compiler-plugin.jar!/" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -280,8 +253,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-3" y="0" width="1286" height="994" extended-state="6" />
-    <editor active="true" />
+    <frame x="-3" y="0" width="1286" height="994" extended-state="7" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2617504" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -293,11 +265,11 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32988507" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32988507" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32988507" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49918962" weight="0.32988507" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.49918962" visible="true" weight="0.32988507" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5008104" side_tool="true" weight="0.32988507" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32988507" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32988507" />
