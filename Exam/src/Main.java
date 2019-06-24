@@ -1,11 +1,11 @@
-import Exams.Exams;
+import Exams.Exam;
 
 import java.io.*;
 
 public class Main {
     public static void main(String args[]) throws IOException {
 
-        Exams exams = new Exams();
+        Exam exams = new Exam();
 
         File file = new File("Exams.txt");
 
@@ -21,11 +21,14 @@ public class Main {
                     for (int i = 0 ;  i < exams.students.size(); i++)
                         for (int j = 0; j < exams.students.get(i).getRecords().size(); j++) {
                             System.out.println(exams.students.get(i).getFullName()+
-                                    " "+exams.students.get(i).getRecords().get(j).FullNameTeacher +
-                                    "(IQ=" + exams.students.get(i).getRecords().get(j).Evaluation +
-                                    ")-" + exams.students.get(i).getRecords().get(j).Test);
+                                    " "+exams.students.get(i).getRecords().get(j).getFullNameTeacherRecord() +
+                                    "(IQ=" + exams.students.get(i).getRecords().get(j).getEvaluation() +
+                                    ")-" + exams.students.get(i).getRecords().get(j).getTest());
                             // Запись содержимого в файл
-                            writer.write(exams.students.get(i).getFullName()+" "+exams.students.get(i).getRecords().get(j).FullNameTeacher + "(IQ=" + exams.students.get(i).getRecords().get(j).Evaluation + ")-" + exams.students.get(i).getRecords().get(j).Test);
+                            writer.write(exams.students.get(i).getFullName()+
+                                    " "+exams.students.get(i).getRecords().get(j).getFullNameTeacherRecord() +
+                                    "(IQ=" + exams.students.get(i).getRecords().get(j).getEvaluation() +
+                                    ")-" + exams.students.get(i).getRecords().get(j).getTest());
                             writer.append('\n');
                         }
 
