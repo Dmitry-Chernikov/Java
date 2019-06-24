@@ -1,9 +1,12 @@
 package Exams.TeachersСomposition;
 
 import Exams.Student;
-import java.util.ArrayList;
+import org.jetbrains.annotations.NotNull;
 
-public class AbstractTeacher extends  ArrayList implements Teacher {
+import java.util.ArrayList;
+import java.util.Collection;
+
+public class AbstractTeacher extends  ArrayList<AbstractTeacher> implements Teacher {
     private String fullname; //ФИО
     private int expectediq; // Ожидаемый IQ
     private int moodfactor; // Коэффициент настроения
@@ -12,6 +15,10 @@ public class AbstractTeacher extends  ArrayList implements Teacher {
         this.fullname = fullname;
         this.expectediq = expectediq;
         this.moodfactor = moodfactor;
+    }
+
+    public AbstractTeacher() {
+
     }
 
     public String getFullName() {
