@@ -16,7 +16,7 @@ public class Main {
         t.add(new MathTeacher("Ядвига Виктровна", (int)(random() *200),(int)(random() * 1)));
         //
 
-        ArrayList<Student> students = new ArrayList<Student>();;
+        Student students = new Student();
 
 
         Exam exams = new Exam(t.get(0),students);
@@ -28,7 +28,7 @@ public class Main {
                 if(file.createNewFile()) {
                     // Создание объекта FileWriter
                     try (FileWriter writer = new FileWriter(file,true)){
-                 //       WriteToFile(writer, exams);
+                        WriteToFile(writer, students, t.get(0));
                         writer.flush();
                         writer.close();
                     }
@@ -40,7 +40,7 @@ public class Main {
         else {//Если существует проверить пустой или нет
             if (file.length() == 0) {
                 try (FileWriter writer = new FileWriter(file,true)){
-                 //   WriteToFile(writer, exams);
+                    WriteToFile(writer, students, t.get(0));
                     writer.flush();
                     writer.close();
                 }
@@ -49,7 +49,7 @@ public class Main {
                 }
             } else{//Дописываем
                 try (FileWriter writer = new FileWriter(file,false)){
-                 //   WriteToFile(writer, exams);
+                    WriteToFile(writer, students, t.get(0));
                     writer.flush();
                     writer.close();
                 }
@@ -60,20 +60,21 @@ public class Main {
 
         }
     }
-        private static void WriteToFile (FileWriter writer, Exam exams) throws IOException {
-            /*for (int i = 0; i < exams.students.size(); i++)
-                for (int j = 0; j < exams.students.get(i).getRecords().size(); j++) {
-                    System.out.println("Студент №"+ exams.students.get(i).getFullName() +
-                            " " + exams.students.get(i).getRecords().get(j).getFullNameTeacherRecord() +
-                            "(IQ=" + exams.students.get(i).getRecords().get(j).getEvaluation() +
-                            ")-" + (exams.students.get(i).getRecords().get(j).getTest() ? "сдал" : "не сдал"));
+        private static void WriteToFile (FileWriter writer, Student students, AbstractTeacher abstractteacher) throws IOException {
+            for (Student student : students)
+                for (int j = 0; j < student.getRecords().size(); j++) {
+                    System.out.println("Студент №" + student.getFullName() +
+                            " " + student.getRecords().get(j).getFullNameTeacherRecord() +
+                            "(IQT" + abstractteacher.getExpectedIQ() +
+                            ") (IQ=" + student.getRecords().get(j).getEvaluation() +
+                            ")-" + (student.getRecords().get(j).getTest() ? "сдал" : "не сдал"));
                     // Запись содержимого в файл
-                    writer.write(exams.students.get(i).getFullName() +
-                            " " + exams.students.get(i).getRecords().get(j).getFullNameTeacherRecord() +
-                            "(IQ=" + exams.students.get(i).getRecords().get(j).getEvaluation() +
-                            ")-" + (exams.students.get(i).getRecords().get(j).getTest() ? "сдал" : "не сдал"));
+                    writer.write(student.getFullName() +
+                            " " + student.getRecords().get(j).getFullNameTeacherRecord() +
+                            "(IQ=" + student.getRecords().get(j).getEvaluation() +
+                            ")-" + (student.getRecords().get(j).getTest() ? "сдал" : "не сдал"));
                     writer.append('\n');
-                }*/
+                }
         }
 
 
