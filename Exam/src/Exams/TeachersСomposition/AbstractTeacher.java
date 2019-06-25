@@ -1,20 +1,18 @@
 package Exams.TeachersСomposition;
 
 import Exams.Student;
-import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
-import java.util.Collection;
 
 public class AbstractTeacher extends  ArrayList<AbstractTeacher> implements Teacher {
     private String fullname; //ФИО
-    private int expectediq; // Ожидаемый IQ
-    private int moodfactor; // Коэффициент настроения
+    private int expectedIq; // Ожидаемый IQ
+    private int moodFactor; // Коэффициент настроения
 
-    public AbstractTeacher(String fullname, int expectediq, int moodfactor){
+    public AbstractTeacher(String fullname, int expectedIq, int moodFactor){
         this.fullname = fullname;
-        this.expectediq = expectediq;
-        this.moodfactor = moodfactor;
+        this.expectedIq = expectedIq;
+        this.moodFactor = moodFactor;
     }
 
     public AbstractTeacher() {
@@ -26,20 +24,21 @@ public class AbstractTeacher extends  ArrayList<AbstractTeacher> implements Teac
     }
 
     public int getExpectedIQ() {
-        return expectediq;
+        return expectedIq;
     }
 
     public int getMoodFactor() {
-        return moodfactor;
+        return moodFactor;
     }
 
     @Override
     public void testStudent(Student student){
-        if ((student.getIQStudent() > this.expectediq) || (student.getIQStudent() / this.expectediq > (1 - this.moodfactor * student.getLuckRatio()))) {
+        if ((student.getIqStudent() > this.expectedIq) || (student.getIqStudent() / this.expectedIq > (1 - this.moodFactor * student.getLuckRatio()))) {
            // new Student.Records(this.fullname, student.getIQStudent(), true).add(student.getRecords());
-            student.getRecords().add(new Student.Records(this.fullname, student.getIQStudent(), true));
+            student.getRecords().add(new Student.Records(this.fullname, student.getIqStudent(), true));
         }else {
-            student.getRecords().add(new Student.Records(this.fullname, student.getIQStudent(), false));
+            student.getRecords().add(new Student.Records(this.fullname, student.getIqStudent(), false));
         }
+
     }
 }

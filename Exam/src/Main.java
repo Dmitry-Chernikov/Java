@@ -16,10 +16,12 @@ public class Main {
         t.add(new MathTeacher("Ядвига Виктровна", (int)(random() *200),(int)(random() * 1)));
         //
 
-        Student students = new Student();
-
+        Student students = new Student(10);
 
         Exam exams = new Exam(t.get(0),students);
+
+
+        System.out.println( exams.Start().toString());
 
         File file = new File("Exams.txt");
 
