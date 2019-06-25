@@ -2,7 +2,7 @@ package Exams.TeachersСomposition;
 
 public class MathTeacher extends AbstractTeacher {
 
-    public MathTeacher(String fullname, int expectediq, int moodfactor) {
-        super(fullname, expectediq, moodfactor);
+    public MathTeacher(String fullName, int expectedIq, int moodFactor) {
+        super(fullName, expectedIq, moodFactor);
     }
 }

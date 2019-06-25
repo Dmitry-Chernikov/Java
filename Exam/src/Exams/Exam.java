@@ -1,18 +1,12 @@
 package Exams;
 
 import Exams.TeachersСomposition.AbstractTeacher;
-import Exams.TeachersСomposition.EnglishTeacher;
-import Exams.TeachersСomposition.MathTeacher;
-
-import java.util.ArrayList;
 
 import static java.lang.Math.random;
 
 public class Exam  {
     private Student students;
     private AbstractTeacher abstractTeacher;
-
-
 
     public Exam (AbstractTeacher abstractTeacher, Student students) {
         this.students = students;
@@ -33,28 +27,9 @@ public class Exam  {
             System.out.println(student.getFullName());
             System.out.println(student.getIqStudent());
         }*/
-
     }
-    public StringBuilder Start (){
-
-        StringBuilder results = new StringBuilder();
-
+    public void Start (){
         students.forEach(s -> abstractTeacher.testStudent(s));
-
-        students.forEach(s -> s.getRecords().forEach(r -> results
-                .append("Студент №")
-                .append(s.getFullName())
-                .append(" ")
-                .append(r.getFullNameTeacherRecord())
-                .append(" (IqT-")
-                .append(abstractTeacher.getExpectedIQ())
-                .append(") (IqS-")
-                .append(r.getEvaluation())
-                .append(") ")
-                .append((r.getTest() ? "сдал" : "не сдал"))
-                .append('\n')));
-
-        return  results;
     }
 }
 
