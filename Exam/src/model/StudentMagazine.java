@@ -1,8 +1,8 @@
-package Exams;
+package model;
 
 import java.util.ArrayList;
 
-public class Student extends ArrayList<Student>  {
+public class StudentMagazine extends ArrayList<StudentMagazine>  {
 
     private String fullName; //ФИО
     private int iqStudent; //IQ студент
@@ -11,18 +11,18 @@ public class Student extends ArrayList<Student>  {
     private Records records = new Records();;
 
 
-    public Student() {
+    public StudentMagazine() {
 
     }
 
-    public Student(int initialCapacity) {
+    public StudentMagazine(int initialCapacity) {
         for (int i = 0; i < initialCapacity; i++) {
-            this.add(new Student());
+            this.add(new StudentMagazine());
         }
         //super(initialCapacity);
     }
 
-    public Student(String fullName, int iqStudent, int luckRatio) {
+    public StudentMagazine(String fullName, int iqStudent, int luckRatio) {
         this.fullName = fullName;
         this.iqStudent = iqStudent;
         this.luckRatio = luckRatio;

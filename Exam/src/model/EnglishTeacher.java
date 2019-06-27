@@ -1,4 +1,4 @@
-package Exams.TeachersСomposition;
+package model;
 
 public class EnglishTeacher  extends AbstractTeacher {
 

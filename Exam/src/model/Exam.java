@@ -1,14 +1,12 @@
-package Exams;
-
-import Exams.TeachersСomposition.AbstractTeacher;
+package model;
 
 import static java.lang.Math.random;
 
 public class Exam  {
-    private Student students;
+    private StudentMagazine students;
     private AbstractTeacher abstractTeacher;
 
-    public Exam (AbstractTeacher abstractTeacher, Student students) {
+    public Exam (AbstractTeacher abstractTeacher, StudentMagazine students) {
         this.students = students;
         this.abstractTeacher = abstractTeacher;
 
@@ -18,9 +16,9 @@ public class Exam  {
             students.get(i).setLuckRatio((int) (random() * 1));
         }
         /*for (int i = 0; i < 10; i++) {
-            students.add(new Student(String.valueOf(i),abstractTeacher.getExpectedIQ() + (int)(random() * (abstractTeacher.getExpectedIQ() *0.1)),(int) (random() * 1)));
+            students.add(new StudentMagazine(String.valueOf(i),abstractTeacher.getExpectedIQ() + (int)(random() * (abstractTeacher.getExpectedIQ() *0.1)),(int) (random() * 1)));
         }*/
-        /*for (Student student:students) {
+        /*for (StudentMagazine student:students) {
             student.setFullName(String.valueOf(student.size() - (student.size()-1)));
             student.setIqStudent(abstractTeacher.getExpectedIQ() + (int)(random() * (abstractTeacher.getExpectedIQ() *0.1)));
             student.setLuckRatio((int) (random() * 1));

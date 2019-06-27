@@ -1,6 +1,5 @@
-package Exams.TeachersСomposition;
+package model;
 
-import Exams.Student;
 import java.util.ArrayList;
 
 public class AbstractTeacher extends  ArrayList<AbstractTeacher> implements Teacher {
@@ -31,12 +30,12 @@ public class AbstractTeacher extends  ArrayList<AbstractTeacher> implements Teac
     }
 
     @Override
-    public void testStudent(Student student){
-        if ((student.getIqStudent() > this.expectedIq) || (student.getIqStudent() / this.expectedIq > (1 - this.moodFactor * student.getLuckRatio()))) {
-           // new Student.Records(this.fullname, student.getIQStudent(), true).add(student.getRecords());
-            student.getRecords().add(new Student.Records(this.fullName, student.getIqStudent(), true));
+    public void testStudent(StudentMagazine studentMagazine){
+        if ((studentMagazine.getIqStudent() > this.expectedIq) || (studentMagazine.getIqStudent() / this.expectedIq > (1 - this.moodFactor * studentMagazine.getLuckRatio()))) {
+           // new StudentMagazine.Records(this.fullname, studentMagazine.getIQStudent(), true).add(studentMagazine.getRecords());
+            studentMagazine.getRecords().add(new StudentMagazine.Records(this.fullName, studentMagazine.getIqStudent(), true));
         }else {
-            student.getRecords().add(new Student.Records(this.fullName, student.getIqStudent(), false));
+            studentMagazine.getRecords().add(new StudentMagazine.Records(this.fullName, studentMagazine.getIqStudent(), false));
         }
 
     }
