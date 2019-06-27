@@ -7,7 +7,7 @@ public class AbstractTeacher extends  ArrayList<AbstractTeacher> implements Teac
     private int expectedIq; // Ожидаемый IQ
     private int moodFactor; // Коэффициент настроения
 
-    public AbstractTeacher(String fullName, int expectedIq, int moodFactor){
+    AbstractTeacher(String fullName, int expectedIq, int moodFactor){
         this.fullName = fullName;
         this.expectedIq = expectedIq;
         this.moodFactor = moodFactor;
@@ -21,7 +21,7 @@ public class AbstractTeacher extends  ArrayList<AbstractTeacher> implements Teac
         return fullName;
     }
 
-    public int getExpectedIQ() {
+    int getExpectedIQ() {
         return expectedIq;
     }
 
@@ -31,8 +31,8 @@ public class AbstractTeacher extends  ArrayList<AbstractTeacher> implements Teac
 
     @Override
     public void testStudent(StudentMagazine studentMagazine){
+
         if ((studentMagazine.getIqStudent() > this.expectedIq) || (studentMagazine.getIqStudent() / this.expectedIq > (1 - this.moodFactor * studentMagazine.getLuckRatio()))) {
-           // new StudentMagazine.Records(this.fullname, studentMagazine.getIQStudent(), true).add(studentMagazine.getRecords());
             studentMagazine.getRecords().add(new StudentMagazine.Records(this.fullName, studentMagazine.getIqStudent(), true));
         }else {
             studentMagazine.getRecords().add(new StudentMagazine.Records(this.fullName, studentMagazine.getIqStudent(), false));

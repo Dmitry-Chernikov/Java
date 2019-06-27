@@ -11,7 +11,7 @@ public class StudentMagazine extends ArrayList<StudentMagazine>  {
     private Records records = new Records();;
 
 
-    public StudentMagazine() {
+    private StudentMagazine() {
 
     }
 
@@ -32,27 +32,27 @@ public class StudentMagazine extends ArrayList<StudentMagazine>  {
         return fullName;
     }
 
-    public void setFullName(String fullName) {
+    void setFullName(String fullName) {
         this.fullName = fullName;
     }
 
-    public int getIqStudent() {
+    int getIqStudent() {
         return iqStudent;
     }
 
-    public void setIqStudent(int iqStudent) {
+    void setIqStudent(int iqStudent) {
         this.iqStudent = iqStudent;
     }
 
-    public int getLuckRatio() {
+    int getLuckRatio() {
         return luckRatio;
     }
 
-    public void setLuckRatio(int luckRatio) {
+    void setLuckRatio(int luckRatio) {
         this.luckRatio = luckRatio;
     }
 
-    public Records getRecords() {
+    Records getRecords() {
         return records;
     }
 
@@ -69,7 +69,7 @@ public class StudentMagazine extends ArrayList<StudentMagazine>  {
 
         }
 
-        public Records(String fullNameTeacherRecord, int evaluation, boolean test) {
+        Records(String fullNameTeacherRecord, int evaluation, boolean test) {
             this.fullNameTeacherRecord = fullNameTeacherRecord;
             this.evaluation = evaluation;
             this.test = test;
