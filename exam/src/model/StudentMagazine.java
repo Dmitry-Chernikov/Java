@@ -2,7 +2,7 @@ package model;
 
 import java.util.ArrayList;
 
-public class StudentMagazine extends ArrayList<StudentMagazine>  {
+public class StudentMagazine {
 
     private String fullName; //ФИО
     private int iqStudent; //IQ студент
@@ -60,7 +60,7 @@ public class StudentMagazine extends ArrayList<StudentMagazine>  {
         this.records = records;
     }
 
-    public static class Records extends ArrayList<Records> {
+    public static class Records {
         private String fullNameTeacherRecord; //Полное имя учителя
         private int evaluation; //Оценка
         private boolean test; //Зачёт
