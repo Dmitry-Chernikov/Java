@@ -21,7 +21,7 @@ public class AbstractTeacher extends  ArrayList<AbstractTeacher> implements Teac
         return fullName;
     }
 
-    int getExpectedIQ() {
+    public int getExpectedIQ() {
         return expectedIq;
     }
 

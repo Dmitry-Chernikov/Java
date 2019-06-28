@@ -52,7 +52,7 @@ public class StudentMagazine extends ArrayList<StudentMagazine>  {
         this.luckRatio = luckRatio;
     }
 
-    Records getRecords() {
+    public Records getRecords() {
         return records;
     }
 

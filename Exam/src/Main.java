@@ -18,26 +18,28 @@ public class Main {
 
         StudentMagazine smArray = new StudentMagazine(10);
 
-        tArray.forEach(t -> {
+        tArray.stream().forEach(t -> {
             try (FileWriter writer = new FileWriter(t.getClass().getSimpleName() +
                     " " + new SimpleDateFormat("dd.MM.yyyy").format(new Date()) + " model.txt")) {
-                smArray.forEach(s -> {
+                smArray.stream().forEach(s -> {
                     new Exam(t, s).Start();
                     try {
-                        writer.write(" ");
-                        /*writer.write(new StringBuilder()
-                                .append("Студент №")
+
+                      /*-->*/  System.out.println(tArray.indexOf(t)+"Не работает");
+
+                        StringBuilder rez =  new StringBuilder();
+                        rez     .append("Студент №")
                                 .append(s.getFullName())
                                 .append(" ")
-                                .append(s.getRecords().get(tArray.indexOf(t)).getFullNameTeacherRecord())
+                                //.append(s.getRecords().get(tArray.indexOf(t)).getFullNameTeacherRecord())
                                 .append(" (IqT-")
                                 .append(t.getExpectedIQ())
                                 .append(") (IqS-")
-                                .append(s.getRecords().get(tArray.indexOf(t)).getEvaluation())
+                                // .append(s.getRecords().get(tArray.indexOf(t)).getEvaluation())
                                 .append(") ")
-                                .append((s.getRecords().get(tArray.indexOf(t)).getTest() ? "сдал" : "не сдал"))
-                                .append('\n' + '\n')
-                                .toString());*/
+                                //.append((s.getRecords().get(tArray.indexOf(t)).getTest() ? "сдал" : "не сдал"))
+                                .append('\n' + '\n');
+                        writer.write(rez.toString());
 
                         writer.append('\n');
                         writer.flush();
