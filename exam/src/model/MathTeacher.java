@@ -14,8 +14,4 @@ public class MathTeacher extends AbstractTeacher {
     public void display() {
         System.out.println(this.getFullName());
     }
-
-    //public MathTeacher(String fullName, int expectedIq, int moodFactor) {
-    //    super(fullName, expectedIq, moodFactor);
-    //}
 }

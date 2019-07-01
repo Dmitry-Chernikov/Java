@@ -20,7 +20,6 @@ public class Exam  {
                           "Иванович", "Вяславович", "Антонович", "Владимирович", "Павлович"));
 
     public Exam (AbstractTeacher abstractTeacher, ArrayList<Student> students) {
-
             students.stream().forEach(s -> {
             s.setFullName(lastName.get((int)(random()*9))+
                     " "+firstName.get((int)(random()*9))+

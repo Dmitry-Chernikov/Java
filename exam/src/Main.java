@@ -27,8 +27,8 @@ public class Main {
                     " " + new SimpleDateFormat("dd.MM.yyyy").format(new Date()) + " model.txt")) {
                 sArray.forEach(s -> {
                     try {
-                        StringBuilder rez =  new StringBuilder();
-                        rez     .append("Студент - ")
+                        writer.write(new StringBuilder()
+                                .append("Студент - ")
                                 .append(s.getFullName())
                                 .append(" -> ")
                                 .append(t.getFullName())
@@ -37,9 +37,8 @@ public class Main {
                                 .append(") (IqS-")
                                 .append(s.getIqStudent())
                                 .append(") -> ")
-                                .append((exam.Start(t, s) ? "сдал" : "не сдал"));
-                        writer.write(rez.toString());
-
+                                .append((exam.Start(t, s) ? "сдал" : "не сдал"))
+                                .toString());
                         writer.append('\n');
                         writer.flush();
                     } catch (IOException e) {

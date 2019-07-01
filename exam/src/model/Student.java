@@ -8,15 +8,15 @@ public class Student extends AbstractPerson {
 
     }
 
-    @Override
-    public void display() {
-        System.out.println(this.getFullName());
-    }
-
     public Student(String fullName, int iqStudent, int luckRatio) {
         super(fullName);
         this.iqStudent = iqStudent;
         this.luckRatio = luckRatio;
+    }
+
+    @Override
+    public void display() {
+        System.out.println(this.getFullName());
     }
 
     @Override

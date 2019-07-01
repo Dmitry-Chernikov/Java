@@ -7,10 +7,10 @@ public abstract class AbstractPerson {
 
     public abstract void display();
 
-    public AbstractPerson() {
+    AbstractPerson() {
     }
 
-    public AbstractPerson(String fullName){
+    AbstractPerson(String fullName){
         String[] fIO = fullName.split(" +");
         this.lastName = fIO[0];
         this.firstName = fIO[1];
