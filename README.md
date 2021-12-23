@@ -1,3 +1,5 @@
-Курс Основы GIT
-My Firs Repo
+Курс Основы GIT.
+
+My Firs Repo.
+
 Проект парсера HTML страницы.
